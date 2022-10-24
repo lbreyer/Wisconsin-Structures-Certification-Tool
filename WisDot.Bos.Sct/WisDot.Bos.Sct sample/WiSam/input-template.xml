@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Inputs>
+  <RunBy />
+  <RunDate />
+  <RunStart />
+  <RunEnd />
+  <NumberOfStructuresAnalyzed />
+  <!--WiSAMS DB selections: Prod, Test, or Dev-->
+  <WisamsDatabaseSelection />
+  <AnalysisType />
+  <!--Structure selections: ByIDs, ByFunding or ByRegions-->
+  <StructureSelection />
+  <IncludeCStructures />
+  <StructureIds />
+  <!--SW(1), SE(2), NE(3), NC(4), NW(5)-->
+  <RegionCodes />
+  <RegionNumbers />
+  <!--Applies to structure selection by regions-->
+  <IncludeStateStructures />
+  <!--Applies to structure selection by regions-->
+  <IncludeLocalStructures />
+  <!--Limit number of structures to analyze and debug; limit applies only to structure selection by funding or by regions-->
+  <MaxNumOfStructuresToAnalyze />
+  <AnalysisStartYear />
+  <AnalysisEndYear />
+  <!--Calendar types: calendar, state fiscal, federal fiscal-->
+  <CalendarType />
+  <DeteriorateOverlayDefects />
+  <InterpolateNbiRatings />
+  <CountTpoInOverlayCountInRules />
+  <IoFiles>
+    <InputFile />
+    <Inventory />
+    <ProgramConstrained />
+    <PriorityConstrained />
+    <ConditionConstrained />
+    <ProgramUnconstrained />
+    <PriorityUnconstrained />
+    <ConditionUnconstrained />
+    <!--Elements to include in the element deteriorated quantities data-->
+    <ElementsToReport />
+    <LocalProgram />
+    <MetaManager />
+    <CoreData />
+  </IoFiles>
+  <PrimaryWorkActions>
+    <PrimaryWorkAction>
+      <WorkActionCode />
+      <WorkActionDesc />
+    </PrimaryWorkAction>
+    <PrimaryWorkAction>
+      <WorkActionCode />
+      <WorkActionDesc />
+    </PrimaryWorkAction>
+  </PrimaryWorkActions>
+  <ApplyBudget />
+  <IsMultiYear />
+  <Budgets>
+    <Budget>
+      <BudgetYear />
+      <BudgetAmount />
+    </Budget>
+  </Budgets>
+  <WorkActionLeastCost />
+  <Policies>
+    <Policy>
+      <PolicyDesc />
+      <PolicyCrit />
+      <PriorityEffect />
+    </Policy>
+  </Policies>
+  <Notes />
+</Inputs>

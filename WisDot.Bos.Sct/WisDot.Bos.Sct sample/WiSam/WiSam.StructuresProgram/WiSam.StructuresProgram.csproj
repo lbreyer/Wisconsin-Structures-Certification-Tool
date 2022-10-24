@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ECBEFED-71F2-4F6D-9C65-4C8F080F8A4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WiSam.StructuresProgram</RootNamespace>
+    <AssemblyName>Wisdot.Bos.Sct.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SCT Logo_Transparent_Flattened_512.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BOS.Box">
+      <HintPath>..\..\..\..\..\..\Users\dotjbb\Box\Bureau-Structures\Structures-Development\Automation-Policy-Stds\BosDlls\Bos.Box\BOS.Box.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Box.V2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ddda8fe64dde1ac3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Box.V2.3.18.0\lib\net45\Box.V2.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.9.3.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.3\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.9.3.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.3\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.9.3.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.3\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.4\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.4\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.4.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_32\Oracle.DataAccess\v4.0_4.112.4.0__89b483f429c47342\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.4\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wisdot.Bos.WiSam.Core\bin\Debug\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Wisdot.Bos.Dw, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Wisdot.Bos.Dw.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddWorkConceptToProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddWorkConceptToProject.Designer.cs">
+      <DependentUpon>FormAddWorkConceptToProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoggingIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoggingIn.Designer.cs">
+      <DependentUpon>FormLoggingIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginController.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainController.cs" />
+    <Compile Include="FormMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMap.Designer.cs">
+      <DependentUpon>FormMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMapping.Designer.cs">
+      <DependentUpon>FormMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMappingController.cs" />
+    <Compile Include="FormNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewProject.Designer.cs">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProposeWorkConcept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProposeWorkConcept.Designer.cs">
+      <DependentUpon>FormProposeWorkConcept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRequestRecertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRequestRecertification.Designer.cs">
+      <DependentUpon>FormRequestRecertification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScot.Designer.cs">
+      <DependentUpon>FormScot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStructure.Designer.cs">
+      <DependentUpon>FormStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStructureController.cs" />
+    <Compile Include="FormStructureProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStructureProject.Designer.cs">
+      <DependentUpon>FormStructureProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStructureProjectController.cs" />
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWorkConcept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkConcept.Designer.cs">
+      <DependentUpon>FormWorkConcept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddWorkConceptToProject.resx">
+      <DependentUpon>FormAddWorkConceptToProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoggingIn.resx">
+      <DependentUpon>FormLoggingIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMap.resx">
+      <DependentUpon>FormMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMapping.resx">
+      <DependentUpon>FormMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewProject.resx">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProposeWorkConcept.resx">
+      <DependentUpon>FormProposeWorkConcept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRequestRecertification.resx">
+      <DependentUpon>FormRequestRecertification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScot.resx">
+      <DependentUpon>FormScot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStructure.resx">
+      <DependentUpon>FormStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStructureProject.resx">
+      <DependentUpon>FormStructureProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkConcept.resx">
+      <DependentUpon>FormWorkConcept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WisDot.Bos.Sct.Core\WisDot.Bos.Sct.Core.csproj">
+      <Project>{4e1cc854-cdbf-460e-9d5f-c7c0a7e39f82}</Project>
+      <Name>WisDot.Bos.Sct.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wisdot.Bos.WiSam.Core\Wisdot.Bos.WiSam.Core.csproj">
+      <Project>{6ebd6d08-28e2-4010-b39c-a9727bd803a1}</Project>
+      <Name>Wisdot.Bos.WiSam.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bos1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WiSAMS logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complexSql.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrast_high.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wcprojstatus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workconcept.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workconcept1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teardrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Acrobat">
+      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-push.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluepinmarker.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Push-Pin-2-Left-Azure-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftazure-45x45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Push_Pin_2_1218818.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-attach-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pin-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Left-Azure-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_pin_16409.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Chartreuse-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Chartreuse-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Chartreuse-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppg-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Chartreuse-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Left-Azure-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map Marker Push Pin 1 Left Azure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-map-pin-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-map-pin-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Yellow-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Red-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Right-Orange-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Left-Dark-Blue-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Left-Dark-Blue-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map-Marker-Ball-Left-Dark-Blue-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workconcept-orange.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workconcept-purple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCT Logo_Transparent_Flattened_64.png" />
+    <None Include="Resources\SCT Logo_Transparent_Flattened_sqr.png" />
+    <None Include="Resources\WisDOT_Logo-32.png" />
+    <None Include="Resources\BOS_Logo_240.png" />
+    <None Include="Resources\scot-logo.png" />
+    <None Include="Resources\SCT Logo_Transparent_Flattened_512.png" />
+    <None Include="Resources\sct.png" />
+    <None Include="Resources\LocationIcon.png" />
+    <None Include="Resources\award_star_bronze_1.png" />
+    <None Include="Resources\award_star_gold_1.png" />
+    <None Include="Resources\award_star_silver_1.png" />
+    <Content Include="SCT Logo_Transparent_Flattened_256.ico" />
+    <Content Include="SCT Logo_Transparent_Flattened_512.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
