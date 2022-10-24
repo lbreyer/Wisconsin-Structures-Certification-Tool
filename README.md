@@ -10,6 +10,7 @@ This application allows for a simple, centralized access point for BoS employees
 
 
 My Role:
+
 Similarly to my work with the Wisconsin Structures Asset Management System, I functioned as the back-end developer on the summer 2021 update and maintenance process for this project focusing mainly on refactoring the overall structural architecture of the application's code into a version of MVC framework designed for Windows Forms Apps.
 
 The goal of reorganizing the code structure in this update was to divide the concerns of the project into the MVC components. By doing this, we allow for simplification of simultaneous development through separation of components with the hope of improving scalability as we further expand the application's functionality going forward.
